@@ -27,9 +27,6 @@ struct ContentView: View {
                     .frame(maxWidth: geometry.size.width, maxHeight: geometry.size.height)
             }
             VStack {
-//                Text("VKontakte")
-//                    .padding(.top, 32)
-//                    .font(.largeTitle)
                 Image("vklogo")
                     .resizable()
                     .frame(maxWidth: 110, maxHeight: 80)
@@ -56,6 +53,7 @@ struct ContentView: View {
                         .cornerRadius(12)
                         .padding(.horizontal, 30)
                 }
+                .disabled(login.isEmpty || password.isEmpty)
             }
         }
         .onTapGesture {
