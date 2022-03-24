@@ -21,11 +21,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            GeometryReader { geometry in
-                Color.blue
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(maxWidth: geometry.size.width, maxHeight: geometry.size.height)
-            }
+            
+            Color.blue
+                .edgesIgnoringSafeArea(.all)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+    
             VStack {
                 Image("vklogo")
                     .resizable()
