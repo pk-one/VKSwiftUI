@@ -1,5 +1,5 @@
 //
-//  UserCellView.swift
+//  GroupRowView.swift
 //  VKSwiftUI
 //
 //  Created by Pavel Olegovich on 14.03.2022.
@@ -7,21 +7,21 @@
 
 import SwiftUI
 
-struct UserCellView: View {
-    
-    var user: User
+struct GroupRowView: View {
+    var group: Group
     
     var body: some View {
         HStack {
-            Image(user.avatar)
+            Image(group.avatar)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 50, height: 50)
                 .cornerRadius(25)
             
             VStack(alignment: .leading){
-                Text(user.fullName)
-                Text(user.cityName ?? "")
+                Text(group.name)
+                    .lineLimit(1)
+                Text(group.description)
                     .font(.caption2)
             }
         }
@@ -29,8 +29,8 @@ struct UserCellView: View {
     }
 }
 
-struct UserCellView_Previews: PreviewProvider {
+struct GroupCellView_Previews: PreviewProvider {
     static var previews: some View {
-        UserCellView(user: User(avatar: "user-2-1", firstName: "Mark", secondName: "Wohlberg", cityName: "Canzas"))
+        GroupRowView(group: Group(avatar: "group-1", name: "Рыбалка в Калининграде - Калининградский рыболов", description: "Рыбалка"))
     }
 }
