@@ -11,9 +11,7 @@ import SwiftUI
 struct VKSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-                NewsListView()
-//            UserListView()
-//            ContentView()
+            LoginView()
         }
     }
 }
