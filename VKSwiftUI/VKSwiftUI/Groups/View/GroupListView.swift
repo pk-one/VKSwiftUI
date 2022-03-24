@@ -14,7 +14,7 @@ struct GroupListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.getGroups(), id: \.id) { group in
-                GroupCellView(group: group)
+                GroupRowView(group: group)
                     .listRowSeparator(.hidden)
             }
             .listStyle(.plain)

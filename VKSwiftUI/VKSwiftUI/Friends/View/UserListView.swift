@@ -14,7 +14,7 @@ struct UserListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.getFriends(), id: \.id) { user in
-                UserCellView(user: user)
+                UserRowView(user: user)
                     .listRowSeparator(.hidden)
             }
             .listStyle(.plain)

@@ -1,5 +1,5 @@
 //
-//  UserCellView.swift
+//  UserRowView.swift
 //  VKSwiftUI
 //
 //  Created by Pavel Olegovich on 14.03.2022.

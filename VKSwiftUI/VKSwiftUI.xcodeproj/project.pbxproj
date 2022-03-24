@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A02363B127DF7841003C4682 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B027DF7841003C4682 /* UserCellView.swift */; };
+		A02363B127DF7841003C4682 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B027DF7841003C4682 /* UserRowView.swift */; };
 		A02363B427DF7892003C4682 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B327DF7892003C4682 /* User.swift */; };
 		A02363B627DF7DF0003C4682 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B527DF7DF0003C4682 /* UserListView.swift */; };
 		A02363BA27DF8682003C4682 /* LabelledDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B927DF8682003C4682 /* LabelledDividerView.swift */; };
 		A085E71627E08FF700A5E896 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085E71527E08FF700A5E896 /* UsersViewModel.swift */; };
 		A085E71827E092CC00A5E896 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085E71727E092CB00A5E896 /* GroupsViewModel.swift */; };
 		A08B34B027DF898400283343 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B34AF27DF898400283343 /* Group.swift */; };
-		A08B34B227DF8ADB00283343 /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B34B127DF8ADB00283343 /* GroupCellView.swift */; };
+		A08B34B227DF8ADB00283343 /* GroupRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B34B127DF8ADB00283343 /* GroupRowView.swift */; };
 		A08B34B427DF8B5400283343 /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B34B327DF8B5400283343 /* GroupListView.swift */; };
 		A08B34B627DF8E9700283343 /* NewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B34B527DF8E9700283343 /* NewsListView.swift */; };
 		A09BCF9927CD549A00957920 /* VKSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BCF9827CD549A00957920 /* VKSwiftUIApp.swift */; };
@@ -24,14 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A02363B027DF7841003C4682 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		A02363B027DF7841003C4682 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		A02363B327DF7892003C4682 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A02363B527DF7DF0003C4682 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		A02363B927DF8682003C4682 /* LabelledDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDividerView.swift; sourceTree = "<group>"; };
 		A085E71527E08FF700A5E896 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		A085E71727E092CB00A5E896 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 		A08B34AF27DF898400283343 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		A08B34B127DF8ADB00283343 /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
+		A08B34B127DF8ADB00283343 /* GroupRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRowView.swift; sourceTree = "<group>"; };
 		A08B34B327DF8B5400283343 /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
 		A08B34B527DF8E9700283343 /* NewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListView.swift; sourceTree = "<group>"; };
 		A09BCF9527CD549A00957920 /* VKSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,17 +100,17 @@
 			isa = PBXGroup;
 			children = (
 				A02363B527DF7DF0003C4682 /* UserListView.swift */,
-				A085E70B27E08F4600A5E896 /* Cell */,
+				A085E70B27E08F4600A5E896 /* Row */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		A085E70B27E08F4600A5E896 /* Cell */ = {
+		A085E70B27E08F4600A5E896 /* Row */ = {
 			isa = PBXGroup;
 			children = (
-				A02363B027DF7841003C4682 /* UserCellView.swift */,
+				A02363B027DF7841003C4682 /* UserRowView.swift */,
 			);
-			path = Cell;
+			path = Row;
 			sourceTree = "<group>";
 		};
 		A085E70C27E08F5F00A5E896 /* Model */ = {
@@ -141,17 +141,17 @@
 			isa = PBXGroup;
 			children = (
 				A08B34B327DF8B5400283343 /* GroupListView.swift */,
-				A085E71027E08F9500A5E896 /* Cell */,
+				A085E71027E08F9500A5E896 /* Row */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		A085E71027E08F9500A5E896 /* Cell */ = {
+		A085E71027E08F9500A5E896 /* Row */ = {
 			isa = PBXGroup;
 			children = (
-				A08B34B127DF8ADB00283343 /* GroupCellView.swift */,
+				A08B34B127DF8ADB00283343 /* GroupRowView.swift */,
 			);
-			path = Cell;
+			path = Row;
 			sourceTree = "<group>";
 		};
 		A085E71127E08FA100A5E896 /* ViewModel */ = {
@@ -303,9 +303,9 @@
 				A02363B627DF7DF0003C4682 /* UserListView.swift in Sources */,
 				A09BCF9B27CD549A00957920 /* ContentView.swift in Sources */,
 				A02363BA27DF8682003C4682 /* LabelledDividerView.swift in Sources */,
-				A02363B127DF7841003C4682 /* UserCellView.swift in Sources */,
+				A02363B127DF7841003C4682 /* UserRowView.swift in Sources */,
 				A08B34B627DF8E9700283343 /* NewsListView.swift in Sources */,
-				A08B34B227DF8ADB00283343 /* GroupCellView.swift in Sources */,
+				A08B34B227DF8ADB00283343 /* GroupRowView.swift in Sources */,
 				A09BCF9927CD549A00957920 /* VKSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
