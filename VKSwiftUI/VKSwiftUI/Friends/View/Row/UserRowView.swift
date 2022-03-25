@@ -31,6 +31,6 @@ struct UserRowView: View {
 
 struct UserCellView_Previews: PreviewProvider {
     static var previews: some View {
-        UserRowView(user: User(avatar: "user-2-1", firstName: "Mark", secondName: "Wohlberg", cityName: "Canzas"))
+        UserRowView(user: User(avatar: "user-1-1", firstName: "Vladimir", secondName: "Ivanov", cityName: "Moskow", photos: ["pencil", "pencil.circle.fill", "trash", "trash.fill"])
     }
 }

@@ -13,14 +13,19 @@ struct UserListView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.getFriends(), id: \.id) { user in
-                UserRowView(user: user)
-                    .listRowSeparator(.hidden)
+            List(self.viewModel.getFriends(), id: \.id) { user in
+                NavigationLink {
+                    LazyView(UserPhotoAlbumView(user: user)) 
+                } label: {
+                    UserRowView(user: user)
+                        .listRowSeparator(.hidden)
+                }
+
+               
             }
             .listStyle(.plain)
             .navigationTitle("Friends")
             .navigationBarTitleDisplayMode(.inline)
-            
         }
     }
 }
