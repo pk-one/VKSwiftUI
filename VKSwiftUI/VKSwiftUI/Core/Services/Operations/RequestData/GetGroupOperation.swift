@@ -11,8 +11,8 @@ import Alamofire
 final class GetGroupOperation: AsyncOperation {
     
     private var request: DataRequest?
-    var data: Data?
-    var error: Error?
+    private var data: Data?
+    private var error: Error?
     
     override func main() {
         request = AF.request(GroupRouter.getGroup).response(queue: DispatchQueue.global()) { [weak self] response in
@@ -25,5 +25,13 @@ final class GetGroupOperation: AsyncOperation {
     override func cancel() {
         request?.cancel()
         super.cancel()
+    }
+    
+    func getData() -> Data? {
+        return data
+    }
+    
+    func getError() -> Error? {
+        return error
     }
 }

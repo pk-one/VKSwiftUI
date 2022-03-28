@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import Alamofire
 
 enum GroupRouter: URLRequestConvertible {
@@ -13,7 +14,7 @@ enum GroupRouter: URLRequestConvertible {
     case getGroup
     
     private var token: String {
-        return SessionInfo.shared.token
+        return UserDefaultManager.shared.userToken ?? ""
     }
     
     private var url: URL {

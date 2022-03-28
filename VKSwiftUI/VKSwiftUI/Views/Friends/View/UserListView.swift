@@ -29,6 +29,11 @@ struct UserListView: View {
             .onAppear {
                 self.viewModel.getFriendsData()
             }
+            .alert("Error", isPresented: $viewModel.isErrorShow) {
+                     EmptyView()
+                 } message: {
+                     Text(viewModel.errorMessage ?? "")
+                 }
         }
     }
 }

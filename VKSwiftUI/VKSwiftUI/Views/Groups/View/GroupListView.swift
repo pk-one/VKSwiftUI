@@ -23,6 +23,11 @@ struct GroupListView: View {
             .onAppear {
                 viewModel.getGroups()
             }
+            .alert("Error", isPresented: $viewModel.isErrorShow) {
+                     EmptyView()
+                 } message: {
+                     Text(viewModel.errorMessage ?? "")
+                 }
         }
     }
 }

@@ -9,21 +9,28 @@ import Foundation
 
 final class ParseUserOperation: Operation {
     
-    private let completion: ([UserItems]) -> Void
+    private let completion: (Result<[UserItems], Error>) -> Void
     
-    init(completion: @escaping ([UserItems]) -> Void) {
+    init(completion: @escaping (Result<[UserItems], Error>) -> Void) {
         self.completion = completion
     }
     
     override func main() {
+        
         guard let getUserOperation = dependencies.first as? GetUserOperation,
-              let data = getUserOperation.data else { return }
+              let data = getUserOperation.getData() else {
+            if let user = dependencies.first as? GetUserOperation,
+               let error = user.getError() {
+                completion(.failure(error))
+            }
+            return
+        }
         
         do {
             let users = try JSONDecoder().decode(User.self, from: data)
-            completion(users.response.items)
-        } catch let jsonError {
-            print(jsonError.localizedDescription)
+            completion(.success(users.response.items))
+        } catch {
+            completion(.failure(error))
         }
     }
 }

@@ -14,7 +14,7 @@ enum UserRouter: URLRequestConvertible {
     case getPhotosFriend(ownerId: Int)
     
     private var token: String {
-        return SessionInfo.shared.token
+        return UserDefaultManager.shared.userToken ?? ""
     }
     
     private var url: URL {
