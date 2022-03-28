@@ -9,17 +9,20 @@ import SwiftUI
 
 struct GroupListView: View {
     
-    let viewModel: GroupsViewModel
+    @ObservedObject var viewModel: GroupsViewModel
     
     var body: some View {
         NavigationView {
-            List(viewModel.getGroups(), id: \.id) { group in
+            List(viewModel.groups, id: \.id) { group in
                 GroupRowView(group: group)
                     .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
             .navigationTitle("Groups")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                viewModel.getGroups()
+            }
         }
     }
 }

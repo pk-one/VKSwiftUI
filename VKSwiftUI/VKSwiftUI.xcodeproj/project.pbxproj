@@ -11,6 +11,21 @@
 		A02363B427DF7892003C4682 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B327DF7892003C4682 /* User.swift */; };
 		A02363B627DF7DF0003C4682 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B527DF7DF0003C4682 /* UserListView.swift */; };
 		A02363BA27DF8682003C4682 /* LabelledDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02363B927DF8682003C4682 /* LabelledDividerView.swift */; };
+		A07CF74D27EE149F004AEE09 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF74C27EE149F004AEE09 /* Photos.swift */; };
+		A07CF74F27EE1919004AEE09 /* FriendPhotoAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF74E27EE1919004AEE09 /* FriendPhotoAlbumViewModel.swift */; };
+		A07CF75227EE1E47004AEE09 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A07CF75127EE1E47004AEE09 /* Alamofire */; };
+		A07CF75527EE1E9C004AEE09 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A07CF75427EE1E9C004AEE09 /* Kingfisher */; };
+		A07CF75927EE23C5004AEE09 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF75827EE23C5004AEE09 /* UserRouter.swift */; };
+		A07CF75B27EE2425004AEE09 /* SessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF75A27EE2425004AEE09 /* SessionInfo.swift */; };
+		A07CF76227EE2612004AEE09 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76127EE2612004AEE09 /* AsyncOperation.swift */; };
+		A07CF76427EE2659004AEE09 /* GetFriendsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76327EE2659004AEE09 /* GetFriendsOperation.swift */; };
+		A07CF76727EE2722004AEE09 /* ParseFriendsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76627EE2722004AEE09 /* ParseFriendsOperation.swift */; };
+		A07CF76A27EE28D5004AEE09 /* DataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76927EE28D5004AEE09 /* DataOperation.swift */; };
+		A07CF76C27EE38CA004AEE09 /* GetPhotosUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76B27EE38CA004AEE09 /* GetPhotosUserOperation.swift */; };
+		A07CF76E27EE39DA004AEE09 /* ParsePhotosUserOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76D27EE39DA004AEE09 /* ParsePhotosUserOperation.swift */; };
+		A07CF77027EE3E89004AEE09 /* GroupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF76F27EE3E89004AEE09 /* GroupRouter.swift */; };
+		A07CF77227EE3F51004AEE09 /* GetGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF77127EE3F51004AEE09 /* GetGroupOperation.swift */; };
+		A07CF77427EE3FE3004AEE09 /* ParseGroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CF77327EE3FE3004AEE09 /* ParseGroupOperation.swift */; };
 		A085E71627E08FF700A5E896 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085E71527E08FF700A5E896 /* UsersViewModel.swift */; };
 		A085E71827E092CC00A5E896 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A085E71727E092CB00A5E896 /* GroupsViewModel.swift */; };
 		A08B34B027DF898400283343 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B34AF27DF898400283343 /* Group.swift */; };
@@ -21,11 +36,10 @@
 		A09BCF9B27CD549A00957920 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BCF9A27CD549A00957920 /* LoginView.swift */; };
 		A09BCF9D27CD549C00957920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09BCF9C27CD549C00957920 /* Assets.xcassets */; };
 		A09BCFA027CD549C00957920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09BCF9F27CD549C00957920 /* Preview Assets.xcassets */; };
-		A0B27E8727ECFA31007DB3D9 /* UserPhotoAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B27E8627ECFA31007DB3D9 /* UserPhotoAlbumView.swift */; };
+		A0B27E8727ECFA31007DB3D9 /* FriendPhotoAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B27E8627ECFA31007DB3D9 /* FriendPhotoAlbumView.swift */; };
 		A0B27E8A27ECFB68007DB3D9 /* UIKit + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B27E8927ECFB68007DB3D9 /* UIKit + Extensions.swift */; };
 		A0B27E8C27ECFE5B007DB3D9 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B27E8B27ECFE5B007DB3D9 /* LazyView.swift */; };
 		A0B27E8E27ED00C2007DB3D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B27E8D27ED00C2007DB3D9 /* Constants.swift */; };
-		A0B27E9027ED0862007DB3D9 /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B27E8F27ED0862007DB3D9 /* View + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +47,19 @@
 		A02363B327DF7892003C4682 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A02363B527DF7DF0003C4682 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		A02363B927DF8682003C4682 /* LabelledDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledDividerView.swift; sourceTree = "<group>"; };
+		A07CF74C27EE149F004AEE09 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		A07CF74E27EE1919004AEE09 /* FriendPhotoAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoAlbumViewModel.swift; sourceTree = "<group>"; };
+		A07CF75827EE23C5004AEE09 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		A07CF75A27EE2425004AEE09 /* SessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionInfo.swift; sourceTree = "<group>"; };
+		A07CF76127EE2612004AEE09 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		A07CF76327EE2659004AEE09 /* GetFriendsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsOperation.swift; sourceTree = "<group>"; };
+		A07CF76627EE2722004AEE09 /* ParseFriendsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseFriendsOperation.swift; sourceTree = "<group>"; };
+		A07CF76927EE28D5004AEE09 /* DataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataOperation.swift; path = ../../../../../../../../../../Library/Developer/CoreSimulator/Devices/DataOperation.swift; sourceTree = "<group>"; };
+		A07CF76B27EE38CA004AEE09 /* GetPhotosUserOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotosUserOperation.swift; sourceTree = "<group>"; };
+		A07CF76D27EE39DA004AEE09 /* ParsePhotosUserOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsePhotosUserOperation.swift; sourceTree = "<group>"; };
+		A07CF76F27EE3E89004AEE09 /* GroupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRouter.swift; sourceTree = "<group>"; };
+		A07CF77127EE3F51004AEE09 /* GetGroupOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupOperation.swift; sourceTree = "<group>"; };
+		A07CF77327EE3FE3004AEE09 /* ParseGroupOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseGroupOperation.swift; sourceTree = "<group>"; };
 		A085E71527E08FF700A5E896 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		A085E71727E092CB00A5E896 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 		A08B34AF27DF898400283343 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -44,11 +71,10 @@
 		A09BCF9A27CD549A00957920 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A09BCF9C27CD549C00957920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A09BCF9F27CD549C00957920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A0B27E8627ECFA31007DB3D9 /* UserPhotoAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoAlbumView.swift; sourceTree = "<group>"; };
+		A0B27E8627ECFA31007DB3D9 /* FriendPhotoAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoAlbumView.swift; sourceTree = "<group>"; };
 		A0B27E8927ECFB68007DB3D9 /* UIKit + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extensions.swift"; sourceTree = "<group>"; };
 		A0B27E8B27ECFE5B007DB3D9 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		A0B27E8D27ED00C2007DB3D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		A0B27E8F27ED0862007DB3D9 /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07CF75527EE1E9C004AEE09 /* Kingfisher in Frameworks */,
+				A07CF75227EE1E47004AEE09 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +126,117 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		A07CF74227EE117C004AEE09 /* FriendPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF74927EE1343004AEE09 /* Model */,
+				A07CF74627EE11C8004AEE09 /* ViewModel */,
+				A07CF74327EE11AA004AEE09 /* View */,
+			);
+			path = FriendPhotoAlbum;
+			sourceTree = "<group>";
+		};
+		A07CF74327EE11AA004AEE09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0B27E8627ECFA31007DB3D9 /* FriendPhotoAlbumView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A07CF74627EE11C8004AEE09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF74E27EE1919004AEE09 /* FriendPhotoAlbumViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A07CF74827EE120A004AEE09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A085E71227E08FBA00A5E896 /* News */,
+				A085E70927E08F3100A5E896 /* Friends */,
+				A07CF74227EE117C004AEE09 /* FriendPhotoAlbum */,
+				A02363B227DF7888003C4682 /* Groups */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A07CF74927EE1343004AEE09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF74C27EE149F004AEE09 /* Photos.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A07CF75627EE1F2A004AEE09 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF75727EE1F3D004AEE09 /* Services */,
+				A07CF76127EE2612004AEE09 /* AsyncOperation.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A07CF75727EE1F3D004AEE09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF75C27EE25AF004AEE09 /* Router */,
+				A07CF75F27EE25DE004AEE09 /* Operations */,
+				A07CF76827EE2868004AEE09 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A07CF75C27EE25AF004AEE09 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF75827EE23C5004AEE09 /* UserRouter.swift */,
+				A07CF76F27EE3E89004AEE09 /* GroupRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A07CF75F27EE25DE004AEE09 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF76027EE25ED004AEE09 /* RequestData */,
+				A07CF76527EE2705004AEE09 /* ParseData */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		A07CF76027EE25ED004AEE09 /* RequestData */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF76327EE2659004AEE09 /* GetFriendsOperation.swift */,
+				A07CF76B27EE38CA004AEE09 /* GetPhotosUserOperation.swift */,
+				A07CF77127EE3F51004AEE09 /* GetGroupOperation.swift */,
+			);
+			path = RequestData;
+			sourceTree = "<group>";
+		};
+		A07CF76527EE2705004AEE09 /* ParseData */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF76627EE2722004AEE09 /* ParseFriendsOperation.swift */,
+				A07CF76D27EE39DA004AEE09 /* ParsePhotosUserOperation.swift */,
+				A07CF77327EE3FE3004AEE09 /* ParseGroupOperation.swift */,
+			);
+			path = ParseData;
+			sourceTree = "<group>";
+		};
+		A07CF76827EE2868004AEE09 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				A07CF75A27EE2425004AEE09 /* SessionInfo.swift */,
+				A07CF76927EE28D5004AEE09 /* DataOperation.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 		A085E70927E08F3100A5E896 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +250,6 @@
 		A085E70A27E08F3C00A5E896 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A0B27E8627ECFA31007DB3D9 /* UserPhotoAlbumView.swift */,
 				A02363B527DF7DF0003C4682 /* UserListView.swift */,
 				A085E70B27E08F4600A5E896 /* Row */,
 			);
@@ -218,9 +356,8 @@
 		A09BCF9727CD549A00957920 /* VKSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				A085E71227E08FBA00A5E896 /* News */,
-				A085E70927E08F3100A5E896 /* Friends */,
-				A02363B227DF7888003C4682 /* Groups */,
+				A07CF75627EE1F2A004AEE09 /* Core */,
+				A07CF74827EE120A004AEE09 /* Views */,
 				A09BCF9827CD549A00957920 /* VKSwiftUIApp.swift */,
 				A09BCF9A27CD549A00957920 /* LoginView.swift */,
 				A02363B727DF866D003C4682 /* Helpers */,
@@ -243,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				A0B27E8927ECFB68007DB3D9 /* UIKit + Extensions.swift */,
-				A0B27E8F27ED0862007DB3D9 /* View + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +400,10 @@
 			dependencies = (
 			);
 			name = VKSwiftUI;
+			packageProductDependencies = (
+				A07CF75127EE1E47004AEE09 /* Alamofire */,
+				A07CF75427EE1E9C004AEE09 /* Kingfisher */,
+			);
 			productName = VKSwiftUI;
 			productReference = A09BCF9527CD549A00957920 /* VKSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +432,10 @@
 				Base,
 			);
 			mainGroup = A09BCF8C27CD549A00957920;
+			packageReferences = (
+				A07CF75027EE1E47004AEE09 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A07CF75327EE1E9C004AEE09 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = A09BCF9627CD549A00957920 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -318,21 +462,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07CF77227EE3F51004AEE09 /* GetGroupOperation.swift in Sources */,
+				A07CF74D27EE149F004AEE09 /* Photos.swift in Sources */,
 				A085E71827E092CC00A5E896 /* GroupsViewModel.swift in Sources */,
 				A085E71627E08FF700A5E896 /* UsersViewModel.swift in Sources */,
 				A08B34B027DF898400283343 /* Group.swift in Sources */,
-				A0B27E9027ED0862007DB3D9 /* View + Extensions.swift in Sources */,
 				A0B27E8C27ECFE5B007DB3D9 /* LazyView.swift in Sources */,
 				A08B34B427DF8B5400283343 /* GroupListView.swift in Sources */,
+				A07CF76427EE2659004AEE09 /* GetFriendsOperation.swift in Sources */,
+				A07CF76C27EE38CA004AEE09 /* GetPhotosUserOperation.swift in Sources */,
 				A02363B427DF7892003C4682 /* User.swift in Sources */,
 				A02363B627DF7DF0003C4682 /* UserListView.swift in Sources */,
 				A0B27E8E27ED00C2007DB3D9 /* Constants.swift in Sources */,
 				A09BCF9B27CD549A00957920 /* LoginView.swift in Sources */,
 				A02363BA27DF8682003C4682 /* LabelledDividerView.swift in Sources */,
+				A07CF76227EE2612004AEE09 /* AsyncOperation.swift in Sources */,
+				A07CF75927EE23C5004AEE09 /* UserRouter.swift in Sources */,
 				A02363B127DF7841003C4682 /* UserRowView.swift in Sources */,
-				A0B27E8727ECFA31007DB3D9 /* UserPhotoAlbumView.swift in Sources */,
+				A07CF75B27EE2425004AEE09 /* SessionInfo.swift in Sources */,
+				A07CF76A27EE28D5004AEE09 /* DataOperation.swift in Sources */,
+				A07CF77027EE3E89004AEE09 /* GroupRouter.swift in Sources */,
+				A07CF74F27EE1919004AEE09 /* FriendPhotoAlbumViewModel.swift in Sources */,
+				A0B27E8727ECFA31007DB3D9 /* FriendPhotoAlbumView.swift in Sources */,
 				A08B34B627DF8E9700283343 /* NewsListView.swift in Sources */,
+				A07CF77427EE3FE3004AEE09 /* ParseGroupOperation.swift in Sources */,
 				A08B34B227DF8ADB00283343 /* GroupRowView.swift in Sources */,
+				A07CF76E27EE39DA004AEE09 /* ParsePhotosUserOperation.swift in Sources */,
+				A07CF76727EE2722004AEE09 /* ParseFriendsOperation.swift in Sources */,
 				A0B27E8A27ECFB68007DB3D9 /* UIKit + Extensions.swift in Sources */,
 				A09BCF9927CD549A00957920 /* VKSwiftUIApp.swift in Sources */,
 			);
@@ -537,6 +693,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A07CF75027EE1E47004AEE09 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
+		A07CF75327EE1E9C004AEE09 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A07CF75127EE1E47004AEE09 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07CF75027EE1E47004AEE09 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A07CF75427EE1E9C004AEE09 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A07CF75327EE1E9C004AEE09 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A09BCF8D27CD549A00957920 /* Project object */;
 }

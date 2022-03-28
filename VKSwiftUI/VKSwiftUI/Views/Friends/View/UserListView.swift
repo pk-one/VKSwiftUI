@@ -9,23 +9,26 @@ import SwiftUI
 
 struct UserListView: View {
    
-    let viewModel: UsersViewModel
+    @ObservedObject var viewModel: UsersViewModel
     
     var body: some View {
         NavigationView {
-            List(self.viewModel.getFriends(), id: \.id) { user in
+            List(self.viewModel.users, id: \.id) { user in
                 NavigationLink {
-                    LazyView(UserPhotoAlbumView(user: user)) 
+                    LazyView(FriendPhotoAlbumView(viewModel: FriendPhotoAlbumViewModel(user: user)))
                 } label: {
                     UserRowView(user: user)
-                        .listRowSeparator(.hidden)
+                       
                 }
-
-               
+                .listRowSeparator(.hidden)
             }
+            
             .listStyle(.plain)
             .navigationTitle("Friends")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                self.viewModel.getFriendsData()
+            }
         }
     }
 }

@@ -6,27 +6,30 @@
 //
 
 import SwiftUI
+import Kingfisher
 
-struct UserPhotoAlbumView: View {
+struct FriendPhotoAlbumView: View {
     
     private enum Constant {
         static let imageWidth = screen.width / 3
     }
     
-    var user: User
-    
+    @ObservedObject var viewModel: FriendPhotoAlbumViewModel
+     
     private let firstGrid = GridItem(.adaptive(minimum: Constant.imageWidth), spacing: 0)
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: [firstGrid], spacing: 0) {
-                ForEach(user.photos, id: \.self) { photo in
+                ForEach(viewModel.photos) { photo in
                     NavigationLink {
                         EmptyView()
                     } label: {
-                        Image(photo)
+                        let url = URL(string: photo.image.first?.url ?? "")
+                        KFImage(url)
+                            .cancelOnDisappear(true)
                             .resizable()
-                            .aspectRatio(calcImageAspectRatio(photo), contentMode: .fill)
+                            .scaledToFill()
                             .frame(width: Constant.imageWidth, height: Constant.imageWidth)
                             .clipped()
                             .border(.black)
@@ -34,13 +37,16 @@ struct UserPhotoAlbumView: View {
                 }
             }
         }
-        .navigationTitle(user.fullName)
+        .navigationTitle(viewModel.fullName)
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            viewModel.getUserPhotos()
+        }
     }
 }
-
-struct UserPhotoAlbumView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserPhotoAlbumView(user: User(avatar: "user-1-1", firstName: "Vladimir", secondName: "Ivanov", cityName: "Moskow", photos: ["user-2-1", "user-2-2", "user-2-3", "user-2-4"]))
-    }
-}
+//
+//struct UserPhotoAlbumView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FriendPhotoAlbumView()
+//    }
+//}
