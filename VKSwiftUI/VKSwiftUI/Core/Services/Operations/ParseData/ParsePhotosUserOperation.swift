@@ -15,7 +15,6 @@ final class ParsePhotosUserOperation: Operation {
         self.completion = completion
     }
     
-    
     override func main() {
         guard let getPhotosUserOperation = dependencies.first as? GetPhotosUserOperation,
               let data = getPhotosUserOperation.data else { return }

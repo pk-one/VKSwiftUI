@@ -16,7 +16,7 @@ struct AppView: View {
             if token == nil {
                 LoginView()
             } else {
-                NewsListView()
+                TabbarView()
             }
         }
     }
