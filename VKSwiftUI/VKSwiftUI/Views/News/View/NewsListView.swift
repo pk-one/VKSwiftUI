@@ -29,6 +29,7 @@ struct NewsListView: View {
             .listStyle(.grouped)
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
+            
             .onAppear {
                 self.viewModel.getNewsData()
             }
