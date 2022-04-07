@@ -11,9 +11,7 @@ import ExpandableText
 
 struct NewsRow: View {
     
-    var news: NewsItems
-    
-    @State private var isShowMoreText: Bool = false
+    var viewModel: NewsRowViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,47 +28,41 @@ struct NewsRow: View {
     
     private var headerNews: some View {
         HStack {
-            Image("group-1")
+            KFImage(viewModel.post?.photoOwnerPost)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 50, height: 50)
                 .cornerRadius(25)
             VStack(alignment: .leading) {
-                Text("Рыбалка в Калининграде - Калининградский рыболов")
+                Text(viewModel.post?.nameOwnerPost ?? "")
                     .lineLimit(1)
                     .font(.headline)
                     .foregroundColor(Color("spTitleText"))
                 
-                Text(DateFormatter.postFormatter.string(from: news.date))
+                Text(DateFormatter.postFormatter.string(from: viewModel.post?.bodyPost.date ?? Date()))
                     .lineLimit(1)
                     .font(.subheadline)
             }
         }
         .padding(.horizontal, 10)
+        .padding(.top, 5)
     }
     
     private var textNews: some View {
         VStack(alignment: .leading) {
-//            ExpandableText(text: news.text ?? "")
-//                        .font(.body)//optional
-//                        .foregroundColor(.primary)//optional
-//                        .lineLimit(3)//optional
-//            if let text = news.text {
-//                if !isShowMoreText && text.count > 200 {
-//                    Button {
-//                        isShowMoreText = true
-//                    } label: {
-//                        Text("Показать полность...")
-//                    }
-//                }
-//            }
+            ExpandableText(text: viewModel.post?.bodyPost.text ?? "")
+                        .font(.body)
+                        .foregroundColor(.primary)
+                        .lineLimit(3)
+                        .expandAnimation(.easeInOut)
+                        .expandButton(TextSet(text: "Показать больше...", font: .body, color: .blue))
         }
         .padding(.horizontal, 10)
     }
     
     private var imageNews: some View {
         HStack {
-            if let postImageUrl = URL(string: news.attachments?.first?.photo?.sizes.last?.url ?? "") {
+            if let postImageUrl = URL(string: viewModel.post?.bodyPost.attachments?.first?.photo?.sizes.last?.url ?? "") {
                 KFImage(postImageUrl)
                 .resizable()
                 .scaledToFit()
@@ -87,7 +79,7 @@ struct NewsRow: View {
                     Image(systemName: "suit.heart")
                         .foregroundColor(Color("spLightGray"))
                     
-                    Text("\(news.likes?.count ?? 0)")
+                    Text("\(viewModel.post?.bodyPost.likes?.count ?? 0)")
                         .foregroundColor(Color("spLightGray"))
                         .font(.subheadline)
                 }
@@ -106,7 +98,7 @@ struct NewsRow: View {
                     Image(systemName: "message")
                         .foregroundColor(Color("spLightGray"))
                     
-                    Text("\(news.comments?.count ?? 0)")
+                    Text("\(viewModel.post?.bodyPost.comments?.count ?? 0)")
                         .foregroundColor(Color("spLightGray"))
                         .font(.subheadline)
                 }
@@ -122,7 +114,7 @@ struct NewsRow: View {
                     Image(systemName: "arrowshape.turn.up.right")
                         .foregroundColor(Color("spLightGray"))
                     
-                    Text("\(news.reposts?.count ?? 0)")
+                    Text("\(viewModel.post?.bodyPost.reposts?.count ?? 0)")
                         .foregroundColor(Color("spLightGray"))
                         .font(.subheadline)
                 }
@@ -137,20 +129,21 @@ struct NewsRow: View {
             HStack {
                 Image(systemName: "eye.fill")
                     .foregroundColor(Color("spLightGray"))
-                Text("\(news.views?.count ?? 0)")
+                Text("\(viewModel.post?.bodyPost.views?.count ?? 0)")
                     .foregroundColor(Color("spLightGray"))
                     .font(.subheadline)
             }
         }
         .padding(.horizontal, 10)
+        .padding(.bottom, 5)
     }
 }
 
 
-struct NewsRow_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsRow(news: NewsItems(id: 1, sourceId: 123, date: Date(), text: "test", attachments: nil, comments: NewsItems.Comments(count: 10) , likes: nil, reposts: nil , views: nil))
-    }
-}
+//struct NewsRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NewsRow(news: NewsItems(id: 1, sourceId: 123, date: Date(), text: "test", attachments: nil, comments: NewsItems.Comments(count: 10) , likes: nil, reposts: nil , views: nil))
+//    }
+//}
 
 //Divider().background(color) }.padding(horizontalPadding

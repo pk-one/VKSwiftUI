@@ -10,7 +10,7 @@ import Foundation
 extension DateFormatter {
     static let postFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE, HH:mm"
+        formatter.dateFormat = "d MMM в HH:mm"
         return formatter
     }()
 }

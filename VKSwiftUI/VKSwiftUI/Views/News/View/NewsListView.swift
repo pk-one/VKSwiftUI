@@ -15,8 +15,9 @@ struct NewsListView: View {
         NavigationView {
             List(self.viewModel.news) { news in
                 Section {
-                    NewsRow(news: news)
+                    NewsRow(viewModel: NewsRowViewModel(news: news))
                         .listRowInsets(EdgeInsets())
+                    
 //                        .listRowSeparator(.hidden)
 //                    //
 //                        .buttonStyle(PlainButtonStyle())
