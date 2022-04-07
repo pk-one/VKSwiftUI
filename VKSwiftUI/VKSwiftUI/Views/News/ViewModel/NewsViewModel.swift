@@ -11,6 +11,7 @@ import RealmSwift
 final class NewsViewModel: ObservableObject {
     
     private let networkService = DataOperation()
+
     
     @Published private(set) var news = [NewsItems]()
     @Published var isErrorShow: Bool = false
